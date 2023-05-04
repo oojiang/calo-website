@@ -5,6 +5,7 @@ $text-color: black;
 $text-color-1: white;
 $background-color: #fcfcfc;
 $accent-color: rgb(64,157,141); //#409d8d
+$accent-color-1: #ffe1b4;
 $gradient-color: rgb(64, 157, 171);
 $navbar-background-color: white;
 
@@ -60,9 +61,11 @@ header {
   
   .site-title{
     display: block;
-    font-size: 2em;
-    font-weight: bold;  }
+    font-size: 2rem;
+    font-weight: bold;  
     text-align: center;
+    margin: 0 0.5rem;
+  }
 
   .nav-item {
     text-align: center;
