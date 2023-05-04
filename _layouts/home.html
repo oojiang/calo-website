@@ -1,0 +1,24 @@
+---
+layout: default
+---
+{% include home.html %}
+
+<div class="calo-branches-container flex-row">
+  <div class="calo-branch gradient">
+    {{ club | markdownify }}
+  </div>
+
+  <div class="calo-branch gradient">
+    {{ eboc | markdownify }}
+  </div>
+
+  <div class="calo-branch gradient">
+    {{ decal | markdownify }}
+  </div>
+</div>
+
+{{ random | markdownify }}
+
+{{ about | markdownify }}
+
+{{ announcements | markdownify }}

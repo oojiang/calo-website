@@ -1,0 +1,17 @@
+title: Cal Origami
+
+calo:
+  header_items:
+    - name: Home
+      link: "/"
+    - name: About
+      link: "/about.html"
+    - name: Officers
+      link: "/officers.html"
+    - name: Contact
+      link: "/contact.html"
+  footer_markdown: |
+    # Footer
+
+    this is a footer
+  # For some reason, this comment needs to be here or else the footer stops rendering. Probably some yaml thing with multiline strings?

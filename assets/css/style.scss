@@ -1,0 +1,133 @@
+---
+---
+// initialize
+$text-color: black;
+$text-color-1: white;
+$background-color: #fcfcfc;
+$accent-color: rgb(64,157,141); //#409d8d
+$gradient-color: rgb(64, 157, 171);
+$navbar-background-color: white;
+
+$breakpoint: 50rem;
+
+body {
+  color: $text-color;
+  background: $background-color;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+a {
+  color: $accent-color;
+  text-decoration: none;
+}
+
+// layouts
+
+header {
+  background: $navbar-background-color;
+  padding-bottom: 0.25rem;
+  padding-top: 0.25rem;
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .site-header{
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .site-logo{
+    height: 2rem;
+  }
+
+  .site-logo-title-container {
+    padding-top: 0.25rem;
+    padding-bottom: 0.25rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .site-title{
+    display: block;
+    font-size: 2em;
+    font-weight: bold;  }
+    text-align: center;
+
+  .nav-item {
+    text-align: center;
+    padding: 0.5rem 0.5rem;
+    border-radius: 4px;
+  }
+
+  .nav-item-selected {
+    background: $accent-color;
+    color: $text-color-1;
+  }
+
+  h1 {
+    margin-bottom: 0px;
+    padding: 0px;
+  }
+}
+
+footer {
+  background: $accent-color;
+  color: $text-color-1;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-top: auto;
+}
+
+.main-content {
+  padding-top: 0.5rem;
+}
+
+.calo-branch {
+  padding: 0.5rem;
+  border: .25rem solid white;
+  border-radius: 12px;
+  background: $accent-color;
+  color: $text-color-1;
+  flex: 1 1 0px;
+}
+
+// misc
+
+.wrapper {
+  width: clamp(0rem, 95%, $breakpoint);
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+
+.shadow-sm {
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075) !important;
+}
+
+.gradient {
+  background: linear-gradient(135deg, $accent-color 0%, $accent-color 35%, $gradient-color 100%)
+}
+
+@media (min-width: $breakpoint) {
+  .flex-row {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+  }
+}
+
+.warning {
+  background: red;
+}

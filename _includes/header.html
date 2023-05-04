@@ -1,0 +1,26 @@
+<header class="shadow-sm">
+  <div class="site-header wrapper flex-row">
+    <a href="{{ "/" |  relative_url }}" class="site-logo-title-container"> 
+      <img class="site-logo" src="assets/logo.png"></img>
+      <div class="site-title">
+        {{ site.title }} 
+      </div>
+    </a>
+    <nav>
+      {% for item in site.calo.header_items %}
+      <!--
+        <a href= {{ item.link | relative_url}}>
+          <div class="nav-item {% if page.url == item.link %} .nav-item-selected {% endif %}">
+            {{ item.name }}
+          </div>
+        </a>
+      -->
+        <a href="{{ item.link | relative_url }}">
+          <div class="nav-item{% if page.url == item.link %} nav-item-selected{% endif %}">
+            {{ item.name }}
+          </div>
+        </a>
+      {% endfor %}
+    </nav>
+  </div>
+</header>
