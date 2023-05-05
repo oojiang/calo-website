@@ -8,13 +8,6 @@
     </a>
     <nav>
       {% for item in site.calo.header_items %}
-      <!--
-        <a href= {{ item.link | relative_url}}>
-          <div class="nav-item {% if page.url == item.link %} .nav-item-selected {% endif %}">
-            {{ item.name }}
-          </div>
-        </a>
-      -->
         <a href="{{ item.link | relative_url }}">
           <div class="nav-item{% if page.url == item.link %} nav-item-selected{% endif %}">
             {{ item.name }}

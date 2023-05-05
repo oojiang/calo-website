@@ -3,6 +3,6 @@ layout: default
 title: Club
 ---
 club stuff here  
-TODO:
+TODO:  
 - photo gallery
 - archive
