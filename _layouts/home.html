@@ -4,15 +4,18 @@ layout: default
 {% include home.html %}
 
 <div class="calo-branches-container flex-row">
-  <div class="calo-branch gradient">
+  <div id="club-branch" class="calo-branch">
+    <img src="assets/penguin.png"></img>
     {{ club | markdownify }}
   </div>
 
-  <div class="calo-branch gradient">
+  <div id="eboc-branch" class="calo-branch">
+    <img src="assets/elephant.png"></img>
     {{ eboc | markdownify }}
   </div>
 
-  <div class="calo-branch gradient">
+  <div id="decal-branch" class="calo-branch">
+    <img src="assets/cp.png"></img>
     {{ decal | markdownify }}
   </div>
 </div>
