@@ -3,8 +3,9 @@
 // initialize
 $text-color: #52665f;
 $text-color-1: white;
-$background-color: #fcfcfc;
 $accent-color: rgb(64,157,141); //#409d8d
+$background-color: #fcfcfc;
+$background-color-1: lighten($accent-color, 20%);
 $navbar-background-color: white;
 
 $breakpoint: 60rem;
@@ -153,7 +154,7 @@ header {
 }
 
 footer {
-  background: lighten($accent-color, 20%);
+  background: $background-color-1;
   color: $text-color-1;
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -169,18 +170,19 @@ footer {
   padding: 0.5rem;
   border-radius: 8px;
   color: $text-color-1;
-  background-color: lighten($accent-color, 20%);
+  background-color: $background-color-1;
   flex: 1 1 0px;
 
   img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    height: 12rem;
-    width: auto;
+    height: auto;
+    width: calc($breakpoint/4);
     filter: invert(100%);
   } 
 }
+
 
 // misc
 
