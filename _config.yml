@@ -13,5 +13,5 @@ calo:
   footer_markdown: |
     # Footer
 
-    this is a footer
+    this is a footer. We can include the social media icons and links here.
   # For some reason, this comment needs to be here or else the footer stops rendering. Probably some yaml thing with multiline strings?

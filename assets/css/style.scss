@@ -7,18 +7,13 @@ $accent-color: rgb(64,157,141); //#409d8d
 $background-color: #fcfcfc;
 $background-color-1: lighten($accent-color, 20%);
 $navbar-background-color: white;
-//$text-color: #f0f0f0;
-//$text-color-1: #f0f0f0;
-//$accent-color: rgb(64,157,141); //#409d8d
-//$background-color: #0f0f0f;
-//$background-color-1: lighten($accent-color, 20%);
-//$navbar-background-color: black;
 
 $line-height: 1.5rem;
 
 $min-width: 10rem;
 $breakpoint: 40rem;
 $max-width: 60rem;
+$grid-item-width: 15rem;
 
 //fonts
 @font-face {
@@ -146,7 +141,7 @@ footer {
   color: $text-color-1;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  margin-top: auto;
+  margin-top: 1rem;
 }
 
 .main-content {
@@ -205,7 +200,7 @@ footer {
 .officer-card {
   display: flex;
   flex-direction: column;
-  width: 15rem;
+  width: $grid-item-width;
   font-size: .8rem;
 
   $radius: 3rem;
@@ -264,4 +259,17 @@ ul.no-bullets {
 
 .warning {
   background: red;
+}
+
+.images-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  img {
+    margin: 1rem;
+    width: clamp($grid-item-width, 50%, $break-point);
+    object-fit: cover;
+  }
 }

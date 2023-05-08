@@ -13,6 +13,11 @@ which teaches students how to fold origami, shape models to express their creati
 scratch. We welcome you, whether you've never folded origami in your life or you're a grizzled origami veteran, to 
 come fold origami with us!
 
+<div class="images-container">
+    <img src="assets/img/1-photo.jpg">
+    <img src="assets/img/Pots.jpg">
+</div>
+
 # Announcements!
 Announcements are posted on our [Instagram](https://www.instagram.com/calorigami/), 
 [Discord](https://discord.gg/BERfuzUbFV),
