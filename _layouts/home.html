@@ -3,26 +3,20 @@ layout: default
 ---
 {% include home.html %}
 
-<div class="calo-branches-container flex-row">
-  <a href="/club/">
-    <div class="calo-branch">
-      <img src="assets/home/mandrake_root.png">
-      {{ club | markdownify }}
-    </div>
+<div class="calo-branches-container flex-row secondary-color">
+  <a href="/club/" class="calo-branch">
+    <img src="assets/img/home/mandrake_root.png">
+    {{ club | markdownify }}
   <a>
 
-  <a href="/eboc/">
-    <div class="calo-branch">
-      <img src="assets/home/squid.png">
-      {{ eboc | markdownify }}
-    </div>
+  <a href="/eboc/" class="calo-branch">
+    <img src="assets/img/home/squid.png">
+    {{ eboc | markdownify }}
   </a>
 
-  <a href="/decal/">
-    <div class="calo-branch">
-      <img src="assets/home/cp.png">
-      {{ decal | markdownify }}
-    </div>
+  <a href="/decal/" class="calo-branch">
+    <img src="assets/img/home/cp.png">
+    {{ decal | markdownify }}
   </a>
 </div>
 

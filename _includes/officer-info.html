@@ -1,0 +1,15 @@
+<div class="officer-card center-text">
+  {% if include.photo != nil %}
+  <img src="{{ include.photo }}" class="profile-photo">
+  {% else %}
+  <img src="assets/img/logo.png" class="profile-photo">
+  {% endif %}
+  <div>
+    <h2> {{ include.name }} </h2>
+    <ul class="no-bullets">
+      <li> <b>{{ include.position }}</b> </li>
+      <li> {{ include.major}} {{ include.class }} </li>
+    </ul>
+    <div> "{{ include.fun-fact }}" </div>
+  </div>
+</div>

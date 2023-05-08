@@ -1,40 +1,26 @@
 ---
 ---
-// initialize
-$text-color: #52665f;
+/* initialize */
+$text-color: #767876;
 $text-color-1: white;
 $accent-color: rgb(64,157,141); //#409d8d
 $background-color: #fcfcfc;
 $background-color-1: lighten($accent-color, 20%);
 $navbar-background-color: white;
+//$text-color: #f0f0f0;
+//$text-color-1: #f0f0f0;
+//$accent-color: rgb(64,157,141); //#409d8d
+//$background-color: #0f0f0f;
+//$background-color-1: lighten($accent-color, 20%);
+//$navbar-background-color: black;
 
-$breakpoint: 60rem;
+$line-height: 1.5rem;
+
+$min-width: 10rem;
+$breakpoint: 40rem;
+$max-width: 60rem;
 
 //fonts
-@font-face {
-  font-family: 'YanoneKaffeesatz';
-  src: url("/assets/fonts/YanoneKaffeesatz-VariableFont_wght.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Lato';
-  src: url("/assets/fonts/Lato-Light.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Quicksand';
-  src: url("/assets/fonts/Quicksand-VariableFont_wght.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
 @font-face {
   font-family: 'Lexend';
   src: url("/assets/fonts/Lexend-VariableFont_wght.ttf") format("truetype");
@@ -55,21 +41,26 @@ $breakpoint: 60rem;
 $title-font: "Lexend";
 $body-font: "Roboto";
 
-// base
+/* base */
 h1, h2, h3, h4, h5, h6 {
+  color: $accent-color;
   font-weight: normal;
   font-family: $title-font;
+  margin-bottom: 0px;
+  padding: 0px;
 }
 
-html {
-  font-size: 1.1rem;
+@media (min-width: $breakpoint) {
+  html {
+    font-size: 1.1rem;
+  }
 }
 
 body {
   color: $text-color;
   background: $background-color;
   font-family: "Roboto";
-  line-height: 1.5rem;
+  line-height: $line-height;
   margin: 0;
   padding: 0;
   display: flex;
@@ -87,12 +78,12 @@ a:hover {
 }
 
 img {
-  max-width: calc(0.6 * $breakpoint);
+  max-width: calc(0.6 * $max-width);
   margin: 1rem auto;
   display: block;
 }
 
-// layout
+/* layout */
 header {
   background: $navbar-background-color;
   padding-bottom: 0.25rem;
@@ -113,6 +104,7 @@ header {
 
   .site-logo{
     height: 2rem;
+    margin: 1rem 0rem;
   }
 
   .site-logo-title-container {
@@ -120,6 +112,7 @@ header {
     padding-bottom: 0.25rem;
     display: flex;
     flex-direction: row;
+    align-content: center;
     justify-content: center;
     align-items: center;
   }
@@ -137,6 +130,7 @@ header {
     text-align: center;
     padding: 0.5rem 0.5rem;
     border-radius: 4px;
+
   }
   .nav-item:hover {
     text-decoration: underline;
@@ -144,11 +138,6 @@ header {
 
   .nav-item-selected {
     color: $accent-color;
-  }
-
-  h1 {
-    margin-bottom: 0px;
-    padding: 0px;
   }
 }
 
@@ -164,7 +153,12 @@ footer {
   padding-top: 0.5rem;
 }
 
+// home
 .calo-branches-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
   a {
     text-decoration: none;
   }
@@ -181,44 +175,91 @@ footer {
 
 .calo-branch {
   margin: 0.25rem;
-  padding: 0.5rem;
+  padding: 1rem;
   border-radius: 8px;
   color: $text-color-1;
   background-color: $background-color-1;
-  flex: 1 1 0px;
 
   img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: calc($breakpoint/4);
+    width: clamp($min-width/4, 100%, $max-width/4);
     filter: invert(100%);
     object-fit: contain;
   } 
 }
 
-
-// misc
-
-.wrapper {
-  width: clamp(0rem, 95%, $breakpoint);
-  margin-right: auto;
-  margin-left: auto;
-  padding-right: 0.5rem;
-  padding-left: 0.5rem;
+// instagram
+@media (max-width: 345px) { // hardcoded 345px because it horizontal scroll occurs for 344px or smaller
+  .instagram-container {
+    display: none
+  }
 }
 
-.shadow-sm {
-  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+// officers
+.officer-card-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.officer-card {
+  display: flex;
+  flex-direction: column;
+  width: 15rem;
+  font-size: .8rem;
+
+  $radius: 3rem;
+  img {
+    margin-bottom: 0;
+    height: 2 * $radius;
+    width: 2 * $radius;
+    border-radius: $radius;
+    border: 2px solid $accent-color;
+    object-fit: cover;
+  }
+}
+
+// misc
+.wrapper {
+  width: clamp($min-width, 90%, $max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: .5rem;
+  padding-right: .5rem;
 }
 
 @media (min-width: $breakpoint) {
   .flex-row {
     display: flex;
     flex-direction: row;
-    align-content: center;
-    justify-content: center;
   }
+}
+
+.secondary-color {
+  color: $text-color-1;
+
+  h1, h2, h3, h4, h5, h6 {
+    color: $text-color-1;
+  }
+}
+
+.shadow-sm {
+  box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+.center-text {
+  text-align: center;
+}
+
+.center-flex {
+  align-content: center;
+  justify-content: center;
+}
+
+ul.no-bullets {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
 }
 
 .warning {
