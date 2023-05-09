@@ -1,0 +1,7 @@
+<div class="images-container">
+  {% for image in site.static_files %}
+    {% if image.path contains include.photo-gallery-url %}
+    <img src="{{ image.path | relative_url }}">
+    {% endif %}
+  {% endfor %}
+</div>

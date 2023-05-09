@@ -13,7 +13,6 @@ $line-height: 1.5rem;
 $min-width: 10rem;
 $breakpoint: 40rem;
 $max-width: 60rem;
-$grid-item-width: 15rem;
 
 //fonts
 @font-face {
@@ -137,6 +136,10 @@ header {
 }
 
 footer {
+  margin-top: auto;
+}
+
+.footer-div {
   background: $background-color-1;
   color: $text-color-1;
   padding-top: 1rem;
@@ -185,7 +188,7 @@ footer {
 // instagram
 @media (max-width: 345px) { // hardcoded 345px because it horizontal scroll occurs for 344px or smaller
   .instagram-container {
-    display: none
+    display: none;
   }
 }
 
@@ -200,7 +203,7 @@ footer {
 .officer-card {
   display: flex;
   flex-direction: column;
-  width: $grid-item-width;
+  width: 15rem;
   font-size: .8rem;
 
   $radius: 3rem;
@@ -269,7 +272,7 @@ ul.no-bullets {
 
   img {
     margin: 1rem;
-    width: clamp($grid-item-width, 50%, $break-point);
+    width: 15rem;
     object-fit: cover;
   }
 }

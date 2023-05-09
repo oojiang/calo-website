@@ -1,5 +1,11 @@
 title: CAL Origami
 
+compress_images:
+  images_path: "*.jpg"
+
+imageoptim:
+  svgo: false
+
 calo:
   header_items:
     - name: Home

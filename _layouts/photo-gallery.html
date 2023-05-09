@@ -1,12 +1,8 @@
 ---
 layout: page
 ---
+<div class="center-text">
 {{ content }}
-
-<div class="images-container">
-  {% for image in site.static_files %}
-    {% if image.path contains page.photo-gallery-url %}
-    <img src="{{ image.path | relative_url }}">
-    {% endif %}
-  {% endfor %}
 </div>
+
+{% include photo-gallery.html photo-gallery-url=page.photo-gallery-url %}

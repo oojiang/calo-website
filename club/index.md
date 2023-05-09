@@ -7,7 +7,12 @@ title: Club
 <figcaption class="center-text"> Mandrake Root and friends chilling after club. </figcaption>
 </figure>
 
-Check out the cool stuff that we fold each week at club on our [Instagram](https://www.instagram.com/calorigami/)!
+Club meetings are held weekly on **[day of the week]** at **[room]**! For more updates, 
+follow our [Instagram](https://www.instagram.com/calorigami/), 
+[Discord](https://discord.gg/BERfuzUbFV),
+or [Mailing List](https://tr.ee/yEp_s7SGgK)!
+
+Check out the cool stuff that we've folded:
 {% include instagram.html %}
 
 Before we made an instagram account, we published photos the old-fashioned way... by sticking them on our website. 
